@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<!--
+  ===========================================================================
+  FIRST LOOK — per-prospect page template.  Marshall Harrison.
+  ---------------------------------------------------------------------------
+  HOW THIS WORKS (for Claude, when Rolphy asks for a First Look):
+  1. COPY this file to  first-look/<guest-name-and-offer>.html
+     e.g.  first-look/dave-pearce-rah-box.html   (lower-case, dashes, no spaces)
+  2. Fill every <!-- EDIT: ... --> slot below with the real guest + real offer.
+  3. Leave the rest alone — the design, nav and footer must stay identical.
+  4. Show Rolphy the page, then give him the one publish step (drag the
+     site-v2 folder onto Netlify) and the link to send the guest.
+  This page is NOINDEX on purpose: the guest's name and the offer never go
+  near Google. Do not add it to the sitemap and do not link to it from the
+  main site.
+  ===========================================================================
+-->
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- NOINDEX — keep this exactly as-is on every First Look page. -->
+<meta name="robots" content="noindex,nofollow">
+<!-- EDIT: page title — "A first look for <Guest first name> — Marshall Harrison" -->
+<title>A first look for Dave — Marshall Harrison</title>
+<meta name="description" content="Put together for you by Marshall Harrison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<!-- VIEW TRACKING — because each guest has their own page, this page's view count IS that guest's opens. -->
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-RFtajE2_qdHx9ZMOJFemR.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body><header class="inner">
+  <nav class="nav">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:12px"><img src="/images/mh-logo.png" alt="Marshall Harrison" style="height:60px;width:auto"><span class="sr" style="position:absolute;left:-9999px">Marshall Harrison</span></a>
+    <button class="burger" aria-label="Menu">&#9776;</button>
+    <ul>
+      <li><a href="../index.html#events">Our events</a></li>
+      <li><a href="../experiences.html">Experiences</a></li>
+      <li><a href="../story.html">Our story</a></li>
+      <li><a class="talk" href="#reply">Reply to Rolphy</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="wrap ev-head">
+  <!-- EDIT: the personal kicker. Keep it short and warm. -->
+  <span class="meta kick">A first look, put together for Dave</span>
+  <!-- EDIT: the offer headline — what you're actually putting in front of them. -->
+  <h1>A box at the Royal Albert Hall for Teenage Cancer Trust week</h1>
+  <div class="ev-facts">
+    <!-- EDIT: the three facts for THIS offer. -->
+    <div><b>When</b>March 2027<!-- EDIT: the real night you've taken --></div>
+    <div><b>Where</b>Royal Albert Hall, London</div>
+    <div><b>Your party</b>Up to 8 guests<!-- EDIT: box size / how many seats --></div>
+  </div>
+</div>
+
+<!-- EDIT: hero image. Swap to the image that fits the offer; keep an MH /images/ file. -->
+<div class="bleed"><img src="../images/tct-block.jpg" alt="Teenage Cancer Trust week at the Royal Albert Hall"></div>
+
+<div class="wrap ev-intro">
+  <!-- EDIT: the note in Rolphy's own voice. This is the heart of the page —
+       it should read like Rolphy talking to this one person. Replace wholesale. -->
+  <div class="ev-intro-copy">
+    <p>Dave — good to talk earlier. As promised, here's the one I mentioned.</p>
+    <p>I've taken a box for one of the Teenage Cancer Trust nights at the Royal Albert Hall — the gigs we've been running there for over two decades. It's the best room in London on the night, the music's extraordinary, and every seat helps fund the Trust's work with young people. I thought of you and your team straight away.</p>
+    <p>Have a look below. If you fancy it, drop me a line and I'll hold it for you.</p>
+  </div>
+  <a class="btn" href="#reply">Reply to Rolphy</a>
+</div>
+
+<!-- EDIT: gallery — three images that suit the offer. -->
+<div class="frame gal">
+  <div class="full"><img src="../images/tct-1.jpg" alt="A night at the Royal Albert Hall"></div>
+  <img src="../images/tct-florence.jpg" alt="Florence Welch performing at the Royal Albert Hall">
+  <img src="../images/tct-3.jpg" alt="Inside the Royal Albert Hall">
+</div>
+
+<div class="ev-essay">
+  <!-- EDIT: a short section on what the night actually is. Two short paragraphs. -->
+  <h2>What the night looks like</h2>
+  <p>A private box for you and your guests, with hospitality through the evening and one of the great live line-ups the Royal Albert Hall is known for. Arrive, settle in, and let the night do the rest — the kind of evening clients and colleagues remember long afterwards.</p>
+  <p>Everything is handled from the moment you say yes: the box, the hospitality, the details. You turn up.</p>
+</div>
+
+<!-- EDIT: charity line — ONLY where it is literally true (TCT, OXO/IJF, golf days).
+     VERIFY any figure against source before it ships (cross-validation rule). -->
+<div class="charity-note" style="text-align:center">
+  <span class="box-h">Why it matters</span>
+  <p>Through the events we run, Marshall Harrison has raised over &pound;1m for vital charities. Teenage Cancer Trust week at the Royal Albert Hall is the one closest to our hearts — your night out helps fund it.</p>
+</div>
+
+<!-- EDIT: testimonials — one or two, chosen to suit THIS guest's world.
+     Pull from the testimonials pack. Use real, permissioned quotes only. -->
+<div class="ev-essay">
+  <h2>In their words</h2>
+  <p style="font-size:1.15rem">&ldquo;An evening our whole table is still talking about — handled beautifully from start to finish.&rdquo;<!-- EDIT: real quote --><br>
+  <span class="meta" style="margin-top:14px;display:block">Name, Company &middot; Industry<!-- EDIT: attribution --></span></p>
+</div>
+
+<!-- ===================== REPLY BLOCK ===================== -->
+<!-- This sends straight to Rolphy's inbox with the guest + offer already attached,
+     so the reply can open assumptively. The hidden fields carry the context.
+     Netlify Forms handles it — no backend. Keep form name = "first-look". -->
+<div class="wrap ev-head" id="reply" style="padding-top:40px">
+  <span class="meta kick">Reply to Rolphy</span>
+  <h2>Shall I hold it for you?</h2>
+  <p class="body-lg" style="margin-top:18px">A quick line back is all it takes — Rolphy will pick it up himself.</p>
+  <form name="first-look" method="POST" action="../thanks.html" data-netlify="true">
+    <input type="hidden" name="form-name" value="first-look">
+    <!-- EDIT: these two hidden fields carry the context into Rolphy's inbox. -->
+    <input type="hidden" name="prospect" value="Dave Pearce">
+    <input type="hidden" name="offer" value="Royal Albert Hall box — TCT week">
+    <!-- EDIT: pre-fill the guest's name so they don't have to type it. -->
+    <div><label for="f-name">Your name</label><input id="f-name" name="name" value="Dave Pearce" required></div>
+    <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" required></div>
+    <div><label for="f-phone">Phone</label><input id="f-phone" name="phone"></div>
+    <div><label for="f-guests">Likely number of guests</label><input id="f-guests" name="guests" type="number" min="1"></div>
+    <div class="span2"><label for="f-msg">Anything you'd like Rolphy to know?</label><textarea id="f-msg" name="message" rows="4" placeholder="A date that works, who you'd bring — whatever helps."></textarea></div>
+    <div class="span2"><button class="btn btn-solid" type="submit">Send to Rolphy</button></div>
+  </form>
+  <!-- EDIT: Rolphy's direct line, for the ones who'd rather just call. -->
+  <p style="margin-top:26px;color:var(--grey)">Or call Rolphy directly on <b>[phone]</b><!-- EDIT: number -->.</p>
+  <div style="height:80px"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="brand2">Marshall Harrison</p>
+      <p style="max-width:30em;margin-top:10px">Extraordinary Experiences For Causes That Matter<br>Over &pound;1m raised for vital charities through the events we run.</p>
+    </div>
+    <div>
+      <p><a href="../index.html#events">Our events</a></p>
+      <p><a href="../experiences.html">Experiences</a></p>
+      <p><a href="../story.html">Our story</a></p>
+      <p><a href="../contact.html">Contact</a></p>
+    </div>
+    <div>
+      <!-- EDIT: phone + email when confirmed with Rolphy -->
+    </div>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body></html>
