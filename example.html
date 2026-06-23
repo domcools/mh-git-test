@@ -4,34 +4,16 @@
   ===========================================================================
   FIRST LOOK — per-prospect page template.  Marshall Harrison.
   ---------------------------------------------------------------------------
-  HOW THIS WORKS (for Claude, when someone asks for a First Look):
-
-  THE ONE RULE: build every First Look by COPYING this template and filling
-  only the marked slots. NEVER design a page from scratch, and NEVER change the
-  layout, nav, fonts, colours or footer. Free-designing is exactly what makes a
-  page come out looking "generic" instead of Marshall Harrison — the house
-  style lives in ../styles.css and this template inherits it. Copy and fill.
-  Nothing else.
-
-  STEPS:
+  HOW THIS WORKS (for Claude, when Rolphy asks for a First Look):
   1. COPY this file to  first-look/<guest-name-and-offer>.html
      e.g.  first-look/dave-pearce-rah-box.html   (lower-case, dashes, no spaces)
   2. Fill every <!-- EDIT: ... --> slot below with the real guest + real offer.
-     Leave everything that is NOT an EDIT slot exactly as it is.
-  3. Tell the person the exact filename AND the exact final URL it will live at
-     (marshallharrison.co.uk/first-look/<name>).
-  4. Publish: they upload that one file into the first-look/ folder of the
-     GitHub repo (Add file -> Upload files, in the browser). Netlify republishes
-     on its own within about a minute. No dragging folders, no Netlify upload.
-
-  NOINDEX on purpose: the guest's name and the offer never go near Google. Do
-  not add it to the sitemap and do not link to it from the main site.
-
-  FUTURE (not built yet): per-event templates, so anyone can ask for "a landing
-  page for OXO / a Golf Day / [event]" and get a correct page. Same discipline —
-  each event gets its own locked template that is copied, never redesigned.
-  Because the whole site lives in the repo, every template inherits the house
-  style automatically.
+  3. Leave the rest alone — the design, nav and footer must stay identical.
+  4. Show Rolphy the page, then give him the one publish step (drag the
+     site-v2 folder onto Netlify) and the link to send the guest.
+  This page is NOINDEX on purpose: the guest's name and the offer never go
+  near Google. Do not add it to the sitemap and do not link to it from the
+  main site.
   ===========================================================================
 -->
 <head>
@@ -54,7 +36,7 @@
 </head>
 <body><header class="inner">
   <nav class="nav">
-    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:12px"><img src="../images/mh-logo.png" alt="Marshall Harrison" style="height:60px;width:auto"><span class="sr" style="position:absolute;left:-9999px">Marshall Harrison</span></a>
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:12px"><img src="/images/mh-logo.png" alt="Marshall Harrison" style="height:60px;width:auto"><span class="sr" style="position:absolute;left:-9999px">Marshall Harrison</span></a>
     <button class="burger" aria-label="Menu">&#9776;</button>
     <ul>
       <li><a href="../index.html#events">Our events</a></li>
@@ -66,16 +48,6 @@
 </header>
 
 <div class="wrap ev-head">
-  <!-- EDIT (optional): the prospect's company logo, to co-brand the page.
-       Default below is the holding sample (../images/Company Logo Template.jpg).
-       For a REAL prospect: drop their logo into /images with a no-spaces filename
-       (e.g. logo-acme.png) and set src to ../images/logo-acme.png.
-       If you don't have their logo, DELETE this whole block — do NOT send a real
-       prospect the holding placeholder. -->
-  <div style="margin-bottom:24px;display:flex;align-items:center;gap:16px;color:var(--grey);font-size:.85rem">
-    <span>Put together with</span>
-    <img src="../images/Company%20Logo%20Template.jpg" alt="[Company name]" style="height:40px;width:auto">
-  </div>
   <!-- EDIT: the personal kicker. Keep it short and warm. -->
   <span class="meta kick">A first look, put together for Dave</span>
   <!-- EDIT: the offer headline — what you're actually putting in front of them. -->
@@ -84,7 +56,7 @@
     <!-- EDIT: the three facts for THIS offer. -->
     <div><b>When</b>March 2027<!-- EDIT: the real night you've taken --></div>
     <div><b>Where</b>Royal Albert Hall, London</div>
-    <div><b>Your party</b>Up to 8 guests, full hospitality<!-- EDIT: box size / how many seats --></div>
+    <div><b>Your party</b>Up to 8 guests<!-- EDIT: box size / how many seats --></div>
   </div>
 </div>
 
@@ -96,8 +68,8 @@
        it should read like Rolphy talking to this one person. Replace wholesale. -->
   <div class="ev-intro-copy">
     <p>Dave — good to talk earlier. As promised, here's the one I mentioned.</p>
-    <p>We're partnered with Teenage Cancer Trust on the run of nights they hold at the Royal Albert Hall — gigs we've been part of for over two decades. It's the best room in London on the night, the music's extraordinary, and every seat helps fund the Trust's work with young people. I thought of you and your team straight away.</p>
-    <p><strong>We have extremely limited boxes available</strong> across the week — once they're gone, they're gone. If it's of interest, drop me a line and I'll hold one for you.</p>
+    <p>I've taken a box for one of the Teenage Cancer Trust nights at the Royal Albert Hall — the gigs we've been running there for over two decades. It's the best room in London on the night, the music's extraordinary, and every seat helps fund the Trust's work with young people. I thought of you and your team straight away.</p>
+    <p>Have a look below. If you fancy it, drop me a line and I'll hold it for you.</p>
   </div>
   <a class="btn" href="#reply">Reply to Rolphy</a>
 </div>
@@ -123,19 +95,13 @@
   <p>Through the events we run, Marshall Harrison has raised over &pound;1m for vital charities. Teenage Cancer Trust week at the Royal Albert Hall is the one closest to our hearts — your night out helps fund it.</p>
 </div>
 
-<!-- ===================== CASE STUDY / TESTIMONIAL =====================
-     HIDDEN until the permissioned testimonials pack lands (backlog #49).
-     NEVER ship an invented quote. When a real, permissioned quote exists,
-     uncomment this block and fill it with the quote + real attribution
-     (name, company, industry), chosen to suit THIS guest's world. -->
-<!--
+<!-- EDIT: testimonials — one or two, chosen to suit THIS guest's world.
+     Pull from the testimonials pack. Use real, permissioned quotes only. -->
 <div class="ev-essay">
   <h2>In their words</h2>
-  <p style="font-size:1.15rem">&ldquo;[ real, permissioned quote in the client's own words ]&rdquo;<br>
-  <span class="meta" style="margin-top:14px;display:block">[ Name, Company &middot; Industry ]</span></p>
+  <p style="font-size:1.15rem">&ldquo;An evening our whole table is still talking about — handled beautifully from start to finish.&rdquo;<!-- EDIT: real quote --><br>
+  <span class="meta" style="margin-top:14px;display:block">Name, Company &middot; Industry<!-- EDIT: attribution --></span></p>
 </div>
--->
-
 
 <!-- ===================== REPLY BLOCK ===================== -->
 <!-- This sends straight to Rolphy's inbox with the guest + offer already attached,
